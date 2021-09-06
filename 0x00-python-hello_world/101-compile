@@ -1,3 +1,2 @@
-#!/usr/bin/python3
-# https://docs.python.org/3/library/compileall.html
+#!/bin/bash
 python3 -m compileall -b $PYFILE
