@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""Class docstring"""
+"""Magic class"""
 import math
 
 
 class MagicClass:
+    """Code derived from Python bytecode"""
     def __init__(self, radius=0):
-        """Init docstring
-        """
+        """Init docstring"""
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
-                raise TypeError('radius must be a number')
+            raise TypeError('radius must be a number')
         self.__radius = radius
 
     def area(self):
