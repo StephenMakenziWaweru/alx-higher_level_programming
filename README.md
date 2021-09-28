@@ -10,3 +10,4 @@
 03. [0x03-python-data_structures](/0x03-python-data_structures)
 04. [0x04-python-more_data_structures](/0x04-python-more_data_structures)
 05. [0x05-python-exceptions](/0x05-python-exceptions)
+06. [0x06-python-classes_and_objects](/0x06-python-classes_and_objects)
