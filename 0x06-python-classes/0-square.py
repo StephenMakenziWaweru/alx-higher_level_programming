@@ -3,6 +3,6 @@
 
 
 class Square:
-    """This is an empty class"""
+    """Defines a square"""
 
     pass
