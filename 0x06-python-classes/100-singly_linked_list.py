@@ -1,6 +1,11 @@
 #!/usr/bin/python3
+"""Singly linked list and node module"""
+
+
 class Node:
+    """Node class"""
     def __init__(self, data, next_node=None):
+        """Initializes node"""
         self.data = data
         self.next_node = next_node
 
@@ -26,7 +31,9 @@ class Node:
 
 
 class SinglyLinkedList:
+    """Singly linked list class"""
     def __init__(self):
+        """Initializes singly linked list"""
         self.head = None
 
     def __str__(self):
@@ -38,6 +45,7 @@ class SinglyLinkedList:
         return ret[:-1]
 
     def sorted_insert(self, value):
+        """Inserts a node in a sorted linked list"""
         new = Node(value)
         if not self.head:
             self.head = new
