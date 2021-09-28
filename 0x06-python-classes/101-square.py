@@ -61,7 +61,7 @@ class Square:
             return "\n"
 
         for i in range(self.position[1]):
-                ret += "\n"
+            ret += "\n"
         for i in range(self.size):
             for j in range(self.position[0]):
                 ret += " "
@@ -69,7 +69,7 @@ class Square:
                 ret += "#"
             ret += "\n"
         return ret
-    
+
     def my_print(self):
         """Prints the square"""
         print(self.my_srep(), end="")
