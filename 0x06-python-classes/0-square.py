@@ -1,4 +1,4 @@
-#!/usr/bin/py
+#!/usr/bin/python3
 """Square module - it is an empty class"""
 
 
