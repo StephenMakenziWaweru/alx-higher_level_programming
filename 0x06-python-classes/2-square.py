@@ -4,7 +4,7 @@ checks for type and value"""
 
 
 class Square:
-    """defines a square with private instance attribute size"""
+    """Defines a square with private instance attribute size"""
     def __init__(self, size=0):
         """assigns size of the square and checks for type and value"""
         try:
