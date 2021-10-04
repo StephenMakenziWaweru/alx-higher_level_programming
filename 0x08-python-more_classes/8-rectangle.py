@@ -70,7 +70,15 @@ class Rectangle:
         print("Bye rectangle...")
 
     def bigger_or_equal(rect_1, rect_2):
-        """returns the biggest rectangle"""
+        """Returns the biggest of the two rectangles.
+        Args:
+            rect_1: The first rectangle.
+            rect_2: The second rectangle.
+            Raises:
+            TypeError: If rect_1, rect_2 are not instances of Rectangle.
+        Returns:
+            The rectangle with the larger area.
+        """
         if type(rect_1) is not Rectangle:
             raise TypeError('rect_1 must be an instance of Rectangle')
         if type(rect_2) is not Rectangle:
