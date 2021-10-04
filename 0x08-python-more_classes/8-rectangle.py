@@ -2,9 +2,6 @@
 """Rectangle module"""
 
 
-from typing import Type
-
-
 class Rectangle:
     """ Rectangle class"""
     number_of_instances = 0
