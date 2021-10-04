@@ -42,13 +42,13 @@ class Rectangle:
 
     def perimeter(self):
         """Returns the perimeter of the rectangle"""
-        if self.__height == 0 or self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__height + self.__width)
 
     def __str__(self):
         """Returns a string rep of the rectangle"""
-        if self.__height == 0 or self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ""
         return (("#" * self.__width + "\n") * self.__height)[:-1]
 
