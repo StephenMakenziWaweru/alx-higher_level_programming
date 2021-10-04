@@ -11,3 +11,4 @@
 04. [0x04-python-more_data_structures](/0x04-python-more_data_structures)
 05. [0x05-python-exceptions](/0x05-python-exceptions)
 06. [0x06-python-classes](/0x06-python-classes)
+08. [0x08-python-more_classes](/0x08-python-more_classes)
