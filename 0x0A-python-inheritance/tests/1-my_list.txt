@@ -1,0 +1,52 @@
+The ``1-my_list`` module
+========================
+
+Using ``MyList``
+-----------------
+
+Importing function from module:
+    >>> MyList= __import__('1-my_list').MyList
+
+Correct Class Type test:
+    >>> l = MyList()
+    >>> type(l) == MyList
+    True
+
+Correct inheritance test:
+    >>> issubclass(MyList, list)
+    True
+
+Empty list test:
+    >>> l = MyList()
+    >>> l.print_sorted()
+    []
+
+Append method test:
+    >>> l = MyList()
+    >>> l.append(0)
+    >>> l.append(1)
+    >>> l.append(2)
+    >>> l.append(3)
+    >>> l
+    [0, 1, 2, 3]
+
+Correct order list test:
+    >>> l.print_sorted()
+    [0, 1, 2, 3]
+
+Reverse order list test:
+    >>> l = MyList([9, 8, 7, 6, 5])
+    >>> l.print_sorted()
+    [5, 6, 7, 8, 9]
+
+List with negative test:
+    >>> l = MyList([-9, -6, -10, 7, 4])
+    >>> l.print_sorted()
+    [-10, -9, -6, 4, 7]
+
+Unchanged original list test:
+    >>> l = MyList([3, 2, 1, 0])
+    >>> l.print_sorted()
+    [0, 1, 2, 3]
+    >>> l
+    [3, 2, 1, 0]
