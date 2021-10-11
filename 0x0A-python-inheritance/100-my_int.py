@@ -11,4 +11,3 @@ class MyInt(int):
     def __ne__(self, other):
         """Overides and inverts != operator"""
         return int(self) == int(other)
-    
