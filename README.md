@@ -14,3 +14,4 @@
 07. [0x07-python-test_driven_development](/0x07-python-test_driven_development)
 08. [0x08-python-more_classes](/0x08-python-more_classes)
 09. [0x09-python-everything_is_object](/0x09-python-everything_is_object)
+0A. [0x0A-python-inheritance](/0x0A-python-inheritance)
