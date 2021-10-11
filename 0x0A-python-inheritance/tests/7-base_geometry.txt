@@ -1,10 +1,10 @@
 The ``7-base_geometry`` module
-==============================
+============================
 
 Using ``BaseGeometry``
-----------------------
+---------------------
 
-Importing function from module:
+Import function from module:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Correct Class Type test:
@@ -33,6 +33,7 @@ area method normal test:
     >>> bg.area()
     Traceback (most recent call last):
     Exception: area() is not implemented
+
 
 integer_validator() instance method
 -----------------------------------
