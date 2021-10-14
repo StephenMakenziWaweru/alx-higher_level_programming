@@ -13,14 +13,24 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def validate(self, name, value):
+        """validates all values"""
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
+        if (name == "width" or name == "height") and value <= 0:
+            raise ValueError("{} must be > 0".format(name))
+        elif (name == "x" or name == "y") and value < 0:
+            raise ValueError("{} must be >= 0".format(name))
+
     @property
     def x(self):
         """rectangle's x pos"""
         return self.__x
 
     @x.setter
-    def x(self, x):
-        self.__x = x
+    def x(self, value):
+        self.validate("x", value)
+        self.__x = value
 
     @property
     def y(self):
@@ -28,8 +38,9 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self, y):
-        self.__y = y
+    def y(self, value):
+        self.validate("y", value)
+        self.__y = value
 
     @property
     def width(self):
@@ -37,8 +48,9 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, width):
-        self.__width = width
+    def width(self, value):
+        self.validate("width", value)
+        self.__width = value
 
     @property
     def height(self):
@@ -46,5 +58,6 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, height):
-        self.__height = height
+    def height(self, value):
+        self.validate("height", value)
+        self.__height = value
