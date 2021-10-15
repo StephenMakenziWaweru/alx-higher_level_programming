@@ -76,3 +76,17 @@ class Rectangle(Base):
         """returns a string rep of this rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}"\
             .format(self.id, self.x, self.y, self.width, self.height)
+
+    def __updArgsKwarg(self, id=None, width=None, height=None, x=None, y=None):
+        args = locals()
+        for k in args.keys():
+            if args[k] is not None and k != "self" and k == "id":
+                self.__dict__[k] = args[k]
+            elif args[k] is not None and k != "self":
+                self.__dict__["_" + type(self).__name__ + "__" + k] = args[k]
+
+    def update(self, *args, **kwargs):
+        if args:
+            self.__updArgsKwarg(*args)
+        elif kwargs:
+            self.__updArgsKwarg(**kwargs)
