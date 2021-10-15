@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Rectangle class module"""
 from models.base import Base
+import json
 
 
 class Rectangle(Base):
@@ -93,3 +94,8 @@ class Rectangle(Base):
             self.__updArgsKwarg(*args)
         elif kwargs:
             self.__updArgsKwarg(**kwargs)
+
+    def to_dictionary(self):
+        """returns a dictionary rep of this rectangle"""
+        return {"id": self.id, "width": self.width, "height": self.height,
+                "x": self.x, "y": self.y}
