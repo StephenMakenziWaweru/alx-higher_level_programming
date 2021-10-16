@@ -2,7 +2,9 @@
 """Base class module"""
 import json
 import csv
-
+import turtle as t
+import time
+from random import randrange
 
 class Base():
     """Base class"""
@@ -91,3 +93,63 @@ class Base():
             return ret
         except FileNotFoundError:
             return ret
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        # draw a starting point some dist from the window corner
+        # In this grid: down is +ve y-axis and right is +ve x-axis
+        t.bgcolor("green")
+        t.color("red")
+        t.clear()
+        t.up()
+        w_h = t.window_height()
+        w_w = t.window_width()
+        center = -(w_w/2 - 20), (w_h/2 - 20)
+        l = w_w * 0.7
+        s = 20
+        t.setpos(center)        #+ve x
+        t.down()
+        t.forward(l)
+        t.left(90)
+        t.setpos(center)        #-ve y
+        t.forward(s)
+        t.left(90)
+        t.setpos(center)        #-ve x
+        t.forward(s)
+        t.left(90)
+        t.setpos(center)        #+ve y
+        t.forward(l)
+        t.left(90)
+        t.up()
+        t.setpos(center)
+
+        # draw given rectangles and squares
+        t.colormode(255)
+        for i in list_rectangles + list_squares:
+            try:
+                h = i.size
+                w = i.size
+            except AttributeError:
+                h = i.height 
+                w = i.width
+            x = i.x
+            y = i.y
+            t.color("orange")
+            t.fillcolor(randrange(256), randrange(256), randrange(256))
+            t.begin_fill()
+            t.up()
+            t.setpos(center[0] + x, center[1] - y)
+            t.down()
+            t.pensize(1)
+            t.seth(0)
+            t.forward(w)
+            t.right(90)
+            t.forward(h)
+            t.right(90)
+            t.forward(w)
+            t.right(90)
+            t.forward(h)
+            t.right(90)
+            t.end_fill()
+        time.sleep(20)           # delay for 10 secs
+        t.bye()                  # close window
