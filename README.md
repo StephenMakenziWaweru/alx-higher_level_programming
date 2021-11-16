@@ -17,3 +17,4 @@
 0A. [0x0A-python-inheritance](/0x0A-python-inheritance)
 0B. [0x0B-python-input_output](/0x0B-python-input_output)
 0C. [0x0C-python-almost_a_circle](/0x0C-python-almost_a_circle)
+0D. [0x0D-SQL_introduction](/0x0D-SQL_introduction)
