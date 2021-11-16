@@ -1,0 +1,3 @@
+-- lists all records of second_table
+-- avoid rows without name val
+SELECT score, name FROM second_table WHERE name IS NOT NULL ORDER BY score DESC;
