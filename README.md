@@ -1,5 +1,6 @@
-# ALX Higher Level Programming Using Python
-## The second sprint in the ALX SE program
+# ALX Higher Level Programming Using Python and JavaScript
+## The second sprint in the ALX SE program - Python
+## The third sprint in the ALX SE program - JavaScript, web, and Python
 
 <img src="img.jpg" width="100%" height="auto">
 
