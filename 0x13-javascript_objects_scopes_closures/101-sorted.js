@@ -1,5 +1,5 @@
 #!/usr/bin/js
-let dict = require('./101-data.js').dict;
+let dict = require('./101-data').dict;
 let newDict = {};
 for (let key in dict) {
     if (newDict[dict[key]] === undefined) {
