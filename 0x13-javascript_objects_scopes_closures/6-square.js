@@ -3,18 +3,10 @@ const Rectangle = require('./5-square');
 
 class Square extends Rectangle {
   charPrint (c) {
-    let rec = '';
-    for (let i = 0; i < this.height; i++) {
-      for (let j = 0; j < this.width; j++) {
-        if (c !== undefined) {
-          rec += 'C';
-        } else {
-          rec += 'X';
-        }
-      }
-      rec += '\n';
+    if (c === undefined) {
+      c = 'X';
     }
-    process.stdout.write(rec)
+    process.stdout.write((c.repeat(this.width) + '\n').repeat(this.height));
   }
 }
 
