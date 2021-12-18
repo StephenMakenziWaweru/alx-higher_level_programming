@@ -13,8 +13,10 @@ if __name__ == "__main__":
             db=argv[3])
 
     cursor = db.cursor()
-    cursor.execute("""SELECT * FROM states WHERE states.name = %s ORDER BY
-                    states.id ASC""", (argv[4], ))
+    query = """SELECT * FROM states WHERE states.name = '{}' ORDER BY
+                    states.id ASC""".format(argv[4])
+    print(query)
+    cursor.execute(query)
     rows = cursor.fetchall()
     for row in rows:
         print(row)
