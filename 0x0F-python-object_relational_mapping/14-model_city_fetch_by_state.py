@@ -7,7 +7,7 @@ from sys import argv
 
 
 if __name__ == '__main__':
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
                     argv[1], argv[2], argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
@@ -16,3 +16,5 @@ if __name__ == '__main__':
         all()
     for city, state in cities:
         print('{}: ({}) {}'.format(state.name, city.id, city.name))
+    session.commit()
+    session.close()
