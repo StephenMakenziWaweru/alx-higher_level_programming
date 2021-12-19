@@ -13,7 +13,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = sessionmaker(bind=engine)()
-    state = session.query(State).filter(State.id == 2).all()
+    state = session.query(State).filter(State.id == 2).first()
     if state:
         state[0].name = 'Nex Mexico'
     session.commit()
