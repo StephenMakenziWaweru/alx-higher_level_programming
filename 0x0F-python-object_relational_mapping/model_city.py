@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#!/usr/bin/python3
 """City class module"""
 from sqlalchemy import Column, String, Integer, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
