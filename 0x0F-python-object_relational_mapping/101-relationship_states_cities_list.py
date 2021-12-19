@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """List states"""
 from sys import argv
 from relationship_state import Base, State
