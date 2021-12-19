@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Fetch city state"""
 from model_state import Base, State
 from model_city import City
 from sqlalchemy.orm import sessionmaker
