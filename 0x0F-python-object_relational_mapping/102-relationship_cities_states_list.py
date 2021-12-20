@@ -12,13 +12,17 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    eng = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(argv[1],
-                                                                    argv[2],
-                                                                    argv[3]))
-    Base.metadata.create_all(eng)
-    Session = sessionmaker(bind=eng)
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(argv[1],
+                                                                       argv[2],
+                                                                       argv[3]
+                                                                       ))
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
+
     session = Session()
-    rows = session.query(City).all()
-    for city in rows:
-        print("{}: {} -> {}".format(city.id, city.name, city.state.name))
+    rows = session.query(State).order_by(State.id).all()
+    for row in rows:
+        for city in row.cities:
+            print('{}: {} -> {}'.format(city.id, city.name, row.name))
+
     session.close()
