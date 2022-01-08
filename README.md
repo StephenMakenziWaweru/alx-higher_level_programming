@@ -20,3 +20,5 @@
 12. [0x0C-python-almost_a_circle](/0x0C-python-almost_a_circle)
 13. [0x0D-SQL_introduction](/0x0D-SQL_introduction)
 14. [0x0E-SQL_more_queries](/0x0E-SQL_more_queries)
+15. [0x0F-python-object_relational_mapping](/0x0F-python-object_relational_mapping)
+16. [0x10-python-network_0](/0x10-python-network_0)
