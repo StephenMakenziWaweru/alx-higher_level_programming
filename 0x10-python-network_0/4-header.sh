@@ -1,3 +1,3 @@
 #!/bin/bash
-# sends et with header var
-curl -s -H 'X-School-User-Id:98' $1
+# sends GET req with header var
+curl -s -H "X-School-User-Id:98" "$1"
