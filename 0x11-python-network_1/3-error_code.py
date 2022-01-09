@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """takes url & email, sends a POST request and displays the response"""
 from urllib.request import Request, urlopen
-from urllib.error import URLError
+from urllib.error import HTTPError
 from sys import argv
 
 
@@ -10,6 +10,5 @@ try:
     with urlopen(req) as response:
         r = response.read()
         print(r.decode('utf-8'))
-except URLError as e:
-    if hasattr(e, 'code'):
-        print('Error code:', e.code)
+except HTTPError as e:
+    print('Error code:', e.code)
