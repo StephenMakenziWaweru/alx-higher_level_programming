@@ -6,7 +6,8 @@ from sys import argv
 
 
 if __name__ == '__main__':
-    headers = {'Authorization': f'token {argv[2]}'}
-    r = requests.get('https://api.github.com/user', headers=headers)
-    r = r.json()
-    print(r.get('id'))
+    r = requests.get('https://api.github.com/user', auth=(argv[1], argv[2]))
+    try:
+        print(r.json().get('id'))
+    except ValueError:
+        print('Not a valid JSON')
