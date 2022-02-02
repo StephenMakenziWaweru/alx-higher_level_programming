@@ -7,7 +7,7 @@ request(process.argv[2], function (error, response, body) {
   let count = 0;
   JSON.parse(body).results.forEach(film => {
     film.characters.forEach(character => {
-      const res = character.includes('https://swapi-api.hbtn.io/api/people/18/');
+      const res = character.includes('/18/');
       count += (res ? 1 : 0);
     });
   });
