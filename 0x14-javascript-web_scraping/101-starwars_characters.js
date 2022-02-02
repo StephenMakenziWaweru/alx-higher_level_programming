@@ -7,8 +7,7 @@ request(url, (error, response, body) => {
   if (error) throw new Error(error);
   characters = JSON.parse(body).characters;
   characters.forEach(character => {
-    request(character, (error, response, body) => {
-      console.log(JSON.parse(body).name);
-    });
+    request(character, (error, response, body) =>
+      !error && console.log(JSON.parse(body).name));
   });
 });
